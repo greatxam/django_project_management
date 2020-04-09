@@ -12,6 +12,18 @@ identify bottleneck along the way.
 * [Django Rest Framework 3.11](https://www.django-rest-framework.org/)
 * [PostgreSQL 12.1](https://www.postgresql.org/download/)
 
+# Starting up the Server with Django runserver
+**Running the app**
+```
+cd project_management
+python3 manage.py runserver 0.0.0.0:80
+```
+
+**Creating super user**
+```
+python3 manage.py createsuperuser
+```
+
 # Starting up the Server with Docker Settings
 **Running the app**
 ```

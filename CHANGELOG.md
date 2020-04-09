@@ -5,6 +5,10 @@
 - Project module
 - Task module
 
+## [0.0.7] - 2020-04-09
+### Added
+- Readme instruction for using django runserver
+
 ## [0.0.6] - 2020-04-09
 ### Added
 - PostgreSQL
