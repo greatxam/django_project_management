@@ -1,0 +1,10 @@
+version: "3.3"
+
+services:
+  core:
+    build: .
+    command: /docker-entrypoint.sh
+    volumes:
+      - ./project_management:/var/www/project_management
+    ports:
+      - "8080:8080"
