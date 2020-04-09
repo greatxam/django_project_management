@@ -5,6 +5,14 @@
 - Project module
 - Task module
 
+## [0.0.3] - 2020-04-09
+### Added
+- Django Rest Framework
+- Agile app `value` api
+
+### Changed
+- Admin site title
+
 ## [0.0.2] - 2020-04-09
 ### Added
 - Agile app create model `Value`

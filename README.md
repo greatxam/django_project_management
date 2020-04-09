@@ -9,6 +9,7 @@ identify bottleneck along the way.
 * [Python 3.7](https://www.python.org/downloads/)
 * [Django Framework 3.0](https://pypi.org/project/Django/#files/)
 * [Apache HTTP Server 2.4](https://httpd.apache.org/download.cgi)
+* [Django Rest Framework 3.11](https://www.django-rest-framework.org/)
 
 # Starting up the Server
 **Running the app**
@@ -38,6 +39,10 @@ $ docker exec -ti 280daaa3a347 python3 manage.py createsuperuser
 ```
 
 # Web App Navigation
+* [Admin Site](http://localhost/admin)
+* [Web API Agile API](http://localhost/api/agile/)
+
+**Agile Value List API endpoint**
 ```
-http://localhost:8080/
+$ curl http://localhost/api/agile/values/
 ```
