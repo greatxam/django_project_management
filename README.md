@@ -11,9 +11,30 @@ identify bottleneck along the way.
 * [Apache HTTP Server 2.4](https://httpd.apache.org/download.cgi)
 
 # Starting up the Server
-***Running the app**
+**Running the app**
 ```
 $ docker-compose up
+```
+
+**Getting the docker container ID**
+```
+$ docker ps
+```
+
+Example:
+```
+CONTAINER ID        IMAGE                            
+280daaa3a347        django_project_management_core   
+```
+
+**Creating super user**
+```
+$ docker exec -ti <container_id> python3 manage.py createsuperuser
+```
+
+Example: Use the container ID
+```
+$ docker exec -ti 280daaa3a347 python3 manage.py createsuperuser
 ```
 
 # Web App Navigation
