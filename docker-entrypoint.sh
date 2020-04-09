@@ -9,5 +9,5 @@ echo "Applying database migrations"
 python3 manage.py migrate
 
 # run the app
-echo "Starting the app"
-python3 manage.py runserver 0.0.0.0:8080
+echo "String the app"
+apache2ctl -D FOREGROUND

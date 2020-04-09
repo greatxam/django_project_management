@@ -7,4 +7,4 @@ services:
     volumes:
       - ./project_management:/var/www/project_management
     ports:
-      - "8080:8080"
+      - "80:80"

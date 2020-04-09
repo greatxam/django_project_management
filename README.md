@@ -8,6 +8,7 @@ identify bottleneck along the way.
 * [Debian 10.0](https://www.debian.org/releases/buster/)
 * [Python 3.7](https://www.python.org/downloads/)
 * [Django Framework 3.0](https://pypi.org/project/Django/#files/)
+* [Apache HTTP Server 2.4](https://httpd.apache.org/download.cgi)
 
 # Starting up the Server
 ***Running the app**
@@ -18,8 +19,4 @@ $ docker-compose up
 # Web App Navigation
 ```
 http://localhost:8080/
-or 
-http://127.0.0.1:8080/
-or
-http://0.0.0.0:8080/
 ```
