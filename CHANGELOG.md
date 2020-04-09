@@ -5,6 +5,10 @@
 - Project module
 - Task module
 
+## [0.0.4] - 2020-04-09
+### Added
+- Agile app `value` api test
+
 ## [0.0.3] - 2020-04-09
 ### Added
 - Django Rest Framework
