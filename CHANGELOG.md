@@ -5,6 +5,12 @@
 - Project module
 - Task module
 
+## [0.0.6] - 2020-04-09
+### Added
+- PostgreSQL
+- Docker settings
+- Initialize agile command
+
 ## [0.0.5] - 2020-04-09
 ### Added
 - Agile app create model `Principle`

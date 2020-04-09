@@ -1,6 +1,14 @@
 version: "3.3"
 
 services:
+  db:
+    image: postgres:12.1
+    volumes:
+      - ./data/postgre:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: "agile_pm_db"
+      POSTGRES_USER: "agile_pm_dba"
+      POSTGRES_PASSWORD: "WnVHKkyR2pW88TMY"
   core:
     build: .
     command: /docker-entrypoint.sh
@@ -8,3 +16,5 @@ services:
       - ./project_management:/var/www/project_management
     ports:
       - "80:80"
+    depends_on:
+      - db

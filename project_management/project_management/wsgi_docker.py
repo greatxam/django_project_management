@@ -8,9 +8,11 @@ https://docs.djangoproject.com/en/3.0/howto/deployment/wsgi/
 """
 
 import os
+import sys
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project_management.settings')
+sys.path.append('/var/www/project_management')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project_management.settings_docker')
 
 application = get_wsgi_application()

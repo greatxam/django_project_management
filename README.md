@@ -10,16 +10,17 @@ identify bottleneck along the way.
 * [Django Framework 3.0](https://pypi.org/project/Django/#files/)
 * [Apache HTTP Server 2.4](https://httpd.apache.org/download.cgi)
 * [Django Rest Framework 3.11](https://www.django-rest-framework.org/)
+* [PostgreSQL 12.1](https://www.postgresql.org/download/)
 
-# Starting up the Server
+# Starting up the Server with Docker Settings
 **Running the app**
 ```
-$ docker-compose up
+docker-compose up
 ```
 
 **Getting the docker container ID**
 ```
-$ docker ps
+docker ps
 
 # Example:
 CONTAINER ID        IMAGE                            
@@ -28,10 +29,22 @@ CONTAINER ID        IMAGE
 
 **Creating super user**
 ```
-$ docker exec -ti <container_id> python3 manage.py createsuperuser
+docker exec -ti <container_id> python3 manage.py createsuperuser --settings=project_management.settings_docker
 
 # Example: Use the container ID
-$ docker exec -ti 280daaa3a347 python3 manage.py createsuperuser
+docker exec -ti 280daaa3a347 python3 manage.py createsuperuser --settings=project_management.settings_docker
+```
+
+# Running the test
+**Default Settings**
+```
+cd project_management
+python3 manage.py test
+```
+
+**Docker Settings**
+```
+docker exec -ti <container_id> python3 manage.py test --settings=project_management.settings_docker
 ```
 
 # Web App Navigation
@@ -40,10 +53,35 @@ $ docker exec -ti 280daaa3a347 python3 manage.py createsuperuser
 
 **Agile Value List API endpoint**
 ```
-$ curl http://localhost/api/agile/values/
+curl http://localhost/api/agile/values/
+```
+
+**Create Agile Value API endpoint**
+* name - required
+* description - optional
+```
+{
+    "name": "Value Name",
+}
+```
+```
+curl -X POST -H 'Content-Type: application/json' -d '{"name": "Value Name"}' http://localhost/api/agile/values/
 ```
 
 **Agile Principle List API endpont**
 ```
-$ curl http://localhost/api/agile/principles/
+curl http://localhost/api/agile/principles/
+```
+
+**Create Agile Principle API endpoint**
+* name - required
+* description - optional
+* order - optional
+```
+{
+    "name": "New Principle Name",
+}
+```
+```
+curl -X POST -H 'Content-Type: application/json' -d '{"name": "New Principle Name"}' http://localhost/api/agile/principles/
 ```
