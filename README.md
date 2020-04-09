@@ -20,10 +20,8 @@ $ docker-compose up
 **Getting the docker container ID**
 ```
 $ docker ps
-```
 
-Example:
-```
+# Example:
 CONTAINER ID        IMAGE                            
 280daaa3a347        django_project_management_core   
 ```
@@ -31,10 +29,8 @@ CONTAINER ID        IMAGE
 **Creating super user**
 ```
 $ docker exec -ti <container_id> python3 manage.py createsuperuser
-```
 
-Example: Use the container ID
-```
+# Example: Use the container ID
 $ docker exec -ti 280daaa3a347 python3 manage.py createsuperuser
 ```
 
@@ -45,4 +41,9 @@ $ docker exec -ti 280daaa3a347 python3 manage.py createsuperuser
 **Agile Value List API endpoint**
 ```
 $ curl http://localhost/api/agile/values/
+```
+
+**Agile Principle List API endpont**
+```
+$ curl http://localhost/api/agile/principles/
 ```

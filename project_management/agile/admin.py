@@ -10,3 +10,10 @@ from agile.models import *
 class ValueAdmin(admin.ModelAdmin):
     list_display = ('name', 'description')
     search_fields = ('name',)
+
+
+@admin.register(Principle)
+class PrincipleAdmin(admin.ModelAdmin):
+    list_display = ('name', 'order')
+    search_fields = ('name',)
+    list_editable = ('order',)

@@ -5,6 +5,17 @@
 - Project module
 - Task module
 
+## [0.0.5] - 2020-04-09
+### Added
+- Agile app create model `Principle`
+- Agile app `principle` admin
+- Agile app `principle` fixtures
+- Agile app `principle` api
+- Agile app `principle` api test
+
+### Changed
+- Rename `test_agile.py` to `test_value.py`
+
 ## [0.0.4] - 2020-04-09
 ### Added
 - Agile app `value` api test

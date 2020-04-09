@@ -16,3 +16,22 @@ class Value(models.Model):
     description = models.TextField(null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+
+
+class Principle(models.Model):
+    class Meta:
+        db_table = 'agile_principles'
+        ordering = ['order', 'name']
+
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    name = models.CharField(max_length=100)
+    description = models.TextField(null=True, blank=True)
+    order = models.PositiveSmallIntegerField(null=True, blank=True)
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name

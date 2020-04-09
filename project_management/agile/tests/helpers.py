@@ -16,3 +16,16 @@ class ValueTestHelper:
     @staticmethod
     def create_value(name, description):
         return Value.objects.create(name=name, description=description)
+
+
+class PrincipleTestHelper:
+    API_LIST_PRINCIPLE = 'agile-api-principle-list'
+    API_DETAIL_PRINCIPLE = 'agile-api-principle-detail'
+
+    @staticmethod
+    def get_principle(name):
+        return get_object_or_404(Principle, name=name)
+
+    @staticmethod
+    def create_principle(name, description):
+        return Principle.objects.create(name=name, description=description)
